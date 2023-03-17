@@ -1,0 +1,374 @@
+html .bd-toast {
+	background-color: rgb(var(--vaccentcolor));
+	box-shadow: 0 0 0 1px rgba(var(--vtransparencycolor), 0.3), 0 2px 10px 0 rgba(var(--vtransparencycolor), 0.3);
+	color: rgb(var(--fontwhite1));
+	text-shadow: 1px 1px var(--vtextshadow);
+}
+html .bd-toast.icon {
+	background-image: none !important;
+}
+html .bd-toast.icon::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgb(var(--fontwhite1)) !important;
+	-webkit-mask: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg"><path fill="black" d=""/></svg>') center/cover no-repeat;
+}
+html .bd-toast.toast-danger.icon::before,
+html .bd-toast.toast-error.icon::before {
+	-webkit-mask: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/></svg>') 6px 50%/20px 20px no-repeat;
+}
+html .bd-toast.toast-info.icon::before {
+	-webkit-mask: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M 12 2 C 6.48 2 2 6.48 2 12 s 4.48 10 10 10 10-4.48 10-10 S 17.52 2 12 2 z m 1 15 h -2 v -6 h 2 v 6 z m 0-8 h -2 V 7 h 2 v 2 z"/></svg>') 6px 50%/20px 20px no-repeat;
+}
+html .bd-toast.toast-success.icon::before {
+	-webkit-mask: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M 12 2 C 6.48 2 2 6.48 2 12 s 4.48 10 10 10 10-4.48 10-10 S 17.52 2 12 2 z m -2 15 l -5-5 1.41-1.41 L 10 14.17 l 7.59-7.59 L 19 8 l -9 9 z"/></svg>') 6px 50%/20px 20px no-repeat;
+}
+html .bd-toast.toast-warning.icon::before,
+html .bd-toast.toast-warn.icon::before {
+	-webkit-mask: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="black" d="M 1 21 h 22 L 12 2 1 21 z m 12-3 h -2 v -2 h 2 v 2 z m 0-4 h -2 v -4 h 2 v 4 z"/></svg>') 6px 50%/20px 20px no-repeat;
+}
+
+#app-mount .fav {
+	background: var(--header-primary);
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	-webkit-mask: url(https://vsthemes.org/uploads/generator/resources/fav_star_empty.svg) center/contain no-repeat;
+}
+#app-mount .fav:hover,
+#app-mount .fav.active {
+	background: #faa61a;
+}
+#app-mount .fav.active {
+	-webkit-mask: url(https://vsthemes.org/uploads/generator/resources/fav_star.svg) center/contain no-repeat;
+}
+
+#app-mount .bd-modal-inner {								/* modal				container							*/
+	background-color: transparent;
+	border: none;
+	box-shadow: 0 0 0 1px rgba(var(--vtransparencycolor), 0.3), 0 2px 10px 0 rgba(var(--vtransparencycolor), 0.3);
+	position: relative;
+	overflow: hidden;
+}
+.bd-modal-inner::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: var(--vpopout) var(--vpopoutposition)/var(--vpopoutsize);
+	background-attachment: fixed;
+	filter: blur(var(--vpopoutblur));
+	width: unset;
+	height: unset;
+	pointer-events: none;
+	z-index: -1;
+}
+.bd-modal-inner::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(var(--vtransparencycolor), calc(var(--vtransparencyalpha) + 0.2));
+	width: unset;
+	height: unset;
+	border-radius: 5px;
+	pointer-events: none;
+	z-index: -1;
+}
+.bd-modal-wrapper .header {									/* modal				header								*/
+	background-color: transparent;
+	box-shadow: none;
+	color: rgb(var(--fontwhite1));
+}
+.bd-modal-wrapper .bd-modal-body {							/* modal				body								*/
+	background-color: transparent;
+	color: rgb(var(--fontwhite1));
+}
+.bd-modal-wrapper .footer {									/* modal				footer								*/
+	background-color: rgba(var(--vtransparencycolor), 0.2);
+	box-shadow: none;
+}
+.bd-modal-wrapper .footer button {
+	color: rgb(var(--fontwhite1));
+}
+.bd-modal-wrapper .tab-bar-container {						/* modal				tabbarcontainer						*/
+	background: rgba(var(--vtransparencycolor), 0.2);
+	border-top-color: rgba(var(--vtransparencycolor), 0.3);
+	box-shadow: 0 2px 3px 0 rgba(var(--vtransparencycolor), 0.1);
+}		
+.bd-modal-wrapper .tab-bar-container .tab-bar-item {		/* modal				tabbaritem							*/
+	color: rgb(var(--fontwhite1)) !important;
+}
+.bd-modal-wrapper .tab-bar-container .tab-bar-item.selected,/* modal				tabbaritem selected					*/
+.bd-modal-wrapper .tab-bar-container .tab-bar-item:hover {	/* modal				tabbaritem hover					*/
+	border-color: rgb(var(--fontwhite1)) !important;
+}
+.bd-modal-wrapper .table-header,							/* modal				tableheader							*/
+.bd-modal-wrapper .error {									/* modal				tablerow							*/
+	border-color: rgba(var(--fontwhite4), 0.3);
+	color: rgb(var(--fontwhite1));
+}
+	
+#pubslayer .ui-tab-bar-item,
+#app-mount #bd-settings-sidebar .ui-tab-bar-item {			/* sidebar				item								*/
+	color: rgb(var(--fontwhite3));
+}
+#pubslayer .ui-tab-bar-item:hover,
+#app-mount #bd-settings-sidebar .ui-tab-bar-item:hover {
+	background-color: rgba(var(--vtransparencycolor), 0.2);
+	color: rgb(var(--fontwhite2));
+}
+#pubslayer .ui-tab-bar-item.selected,
+#app-mount #bd-settings-sidebar .ui-tab-bar-item.selected {
+	background-color: rgb(var(--vaccentcolor));
+	color: rgb(var(--fontwhite1));
+	text-shadow: 1px 1px var(--vtextshadow);
+}
+#pubslayer .ui-tab-bar-header,
+#app-mount #bd-settings-sidebar .ui-tab-bar-header {		/* sidebar				sideitemheader						*/
+	color: rgb(var(--fontwhite3));
+}
+#pubslayer .ui-tab-bar-separator,
+#app-mount #bd-settings-sidebar .ui-tab-bar-separator {		/* sidebar				sideitemseparator					*/
+	background-color: rgba(var(--fontwhite4), 0.3);
+}
+#bd-settings-sidebar [style*=" color: rgb(114, 118, 125)"] {/* sidebar				credits								*/
+	color: rgb(var(--fontwhite4)) !important;
+}
+
+#app-mount .bd-server-card {								/* pubslayer			guildcard							*/
+	background-color: rgba(var(--vtransparencycolor), 0.3);
+}
+#app-mount .bd-server-icon {								/* pubslayer			guildicon							*/
+	background-color: rgba(var(--vtransparencycolor), 0.2);
+	border-color: transparent;
+}
+#app-mount .bd-server-card:hover,
+#app-mount .bd-server-icon:hover {
+	background-color: rgba(var(--vtransparencycolor), 0.4);
+}
+.bd-server-description-container {							/* pubslayer			guilddescription					*/
+	border-color: rgba(var(--fontwhite4), 0.3);
+	color: rgb(var(--fontwhite3));
+}
+.bd-server-card .bd-server-tags {							/* pubslayer			guildtags							*/
+	color: rgb(var(--fontwhite3));
+}
+#pubslayer h2.ui-form-title {								/* pubslayer			header								*/
+	color: rgb(var(--fontwhite1));
+}
+#pubslayer button {											/* pubslayer			button								*/
+	color: rgb(var(--fontwhite1));
+}
+#pubslayer input {											/* pubslayer			input								*/
+	background-color: rgba(var(--vtransparencycolor), 0.1);
+	border-color: rgba(var(--vtransparencycolor), 0.3);
+	color: rgb(var(--fontwhite1));
+}
+#pubslayer input:hover {
+	border-color: rgb(var(--vtransparencycolor));
+}
+#pubslayer input::placeholder {
+	color: rgb(var(--fontwhite3));
+}
+
+#app-mount #bd-settingspane-container h2.ui-form-title {	/* settingsitems		header								*/
+	color: rgb(var(--fontwhite1));
+	min-width: 100px;
+}
+#app-mount #bd-settingspane-container .ui-switch-item h3 {
+	color: rgb(var(--fontwhite1));
+}
+#app-mount #bd-settingspane-container .ui-switch-item .style-description {
+	border-bottom-color: rgba(var(--fontwhite4), 0.3);
+	color: rgb(var(--fontwhite3));
+}
+
+.bd-switch: {												/* bd switch												*/
+	box-shadow: inset 0 1px 1px rgba(var(--vtransparencycolor), 0.15);
+}
+.bd-switch:not(.bd-switch-checked) {
+	background-color: rgba(var(--vtransparencycolor), 0.3);
+}
+.bd-switch::before {
+	background-color: rgb(var(--fontwhite1));
+	box-shadow: 0 2px 4px rgba(var(--vtransparencycolor), 0.6);
+}
+
+.bd-select-wrapper {										/* bd select			wrapper								*/
+	color: rgb(var(--fontwhite1));
+}
+.bd-select {												/* bd select			inner								*/
+	background-color: rgba(var(--vtransparencycolor), 0.1);
+	border-color: rgba(var(--vtransparencycolor), 0.3);
+	color: rgb(var(--fontwhite1));
+}
+.bd-select-arrow {											/* bd select			arrow								*/
+	fill: rgb(var(--fontwhite1));
+}
+.bd-select .bd-select-options {								/* bd select			popout								*/
+	background-color: transparent;
+	border: none;
+	border-radius: 4px;
+	box-shadow: rgba(var(--vtransparencycolor), 0.3) 0px 2px 5px 0px;
+	box-sizing: border-box;
+	padding: 6px 8px;
+	margin-left: -9px;
+}
+.bd-select .bd-select-options::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: var(--vpopout) var(--vpopoutposition)/var(--vpopoutsize);
+	background-attachment: fixed;
+	filter: blur(var(--vpopoutblur));
+	width: unset;
+	height: unset;
+	border-radius: 4px;
+	pointer-events: none;
+	z-index: -1;
+}
+.bd-select .bd-select-options::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(var(--vtransparencycolor), calc(var(--vtransparencyalpha) + 0.3));
+	width: unset;
+	height: unset;
+	border-radius: 4px;
+	pointer-events: none;
+	z-index: -1;
+}
+.bd-select .bd-select-option {								/* bd select			popout option						*/
+	display: flex;
+	align-items: center;
+	min-height: 32px;
+	border-radius: 2px;
+	box-sizing: border-box;
+	color: var(--interactive-normal);
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 0 8px;
+}
+.bd-select .bd-select-option:hover {
+	background-color: rgba(var(--vtransparencycolor), 0.2);
+	color: var(--interactive-hover);
+}
+.bd-select .bd-select-option.selected {
+	background-color: rgba(var(--vtransparencycolor), 0.3);
+	color: var(--interactive-active);
+}
+
+.bd-pfbtn {													/* addonlist			folderbutton						*/
+	color: rgb(var(--fontwhite1));
+	text-shadow: 1px 1px var(--vtextshadow);
+}
+
+.bd-server-tag {											/* addonlist			public list tag						*/
+	color: rgb(var(--fontwhite1));
+	text-shadow: 1px 1px var(--vtextshadow);
+}
+
+.bd-search-wrapper {										/* addonlist			searchbar container					*/
+	background-color: rgba(var(--vtransparencycolor), 0.3);
+	color: rgb(var(--fontwhite1));
+}
+.bd-search {												/* addonlist			searchbar input						*/
+	color: rgb(var(--fontwhite1))
+}
+.bd-search::placeholder {
+	color: rgb(var(--fontwhite3));
+}
+.bd-search-wrapper svg[fill] {								/* addonlist			searchbar icon						*/
+	fill: rgb(var(--fontwhite1));
+}
+
+#app-mount .bd-addon-list .bd-addon-card {					/* addonlist			addoncard							*/
+	background-color: rgba(var(--vtransparencycolor), 0.4);
+	border-color: transparent;
+	color: rgb(var(--fontwhite1));
+	max-height: unset;
+}
+#app-mount .bd-addon-list .bd-addon-header {				/* addonlist			header								*/
+	background-color: rgba(var(--vtransparencycolor), 0.3);
+	border-bottom-color: rgba(var(--fontwhite2), 0.3);
+	color: rgb(var(--fontwhite1));
+}
+#app-mount .bd-addon-list .bda-header {						/* addonlist			header old							*/
+	background-color: transparent;
+}
+#app-mount .bd-addon-list .bd-addon-button svg[fill] {		/* addonlist			header button icon					*/
+	fill: currentColor;
+}
+#app-mount .bd-addon-list .bd-addon-button svg {			/* addonlist			header button icon					*/
+	color: rgb(var(--fontwhite3));
+}
+#app-mount .bd-addon-list .bd-button.bd-addon-button svg,
+#app-mount .bd-addon-list .bd-addon-button svg:hover {
+	color: rgb(var(--fontwhite1));
+}
+#app-mount .bd-addon-list .bd-description {					/* addonlist			description							*/
+	color: rgb(var(--fontwhite2));
+}
+#app-mount .bd-addon-list .bd-description::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+#app-mount .bd-addon-list .bd-footer {						/* addonlist			footer								*/
+	border-top-color: rgba(var(--fontwhite2), 0.3);
+}
+.bd-addon-list .bd-footer button {							/* addonlist			footer button						*/
+	color: rgb(var(--fontwhite1));
+}
+
+#bd-customcss-detach-container {							/* customcsseditor		detached							*/
+	background: transparent;
+}
+#bd-customcss-attach-controls {
+	background-color: rgba(var(--vtransparencycolor), 0.8);
+	box-shadow: none;
+}
+.contentRegion-3nDuYy #bd-customcss-attach-controls,
+#bd-customcss-detach-container #bd-customcss-attach-controls {
+	background-color: rgba(var(--vtransparencycolor), 0.5);
+	box-shadow: inset 0 1px 0 0 rgba(var(--fontwhite4), 0.3);
+	color: rgb(var(--fontwhite1));
+}
+.standardSidebarView-3F1I7i #bd-customcss-attach-controls button,
+.bd-detached-css-editor #bd-customcss-attach-controls button {
+	color: rgb(var(--fontwhite1));
+	background: rgba(var(--vtransparencycolor), 0.5);
+	border: none !important;
+	border-radius: 3px !important;
+	margin: 5px 5px 0 0;
+	transition: background-color 0.1s ease;
+}
+.standardSidebarView-3F1I7i #bd-customcss-attach-controls button:hover,
+.bd-detached-css-editor #bd-customcss-attach-controls button:hover {
+	background: rgb(var(--vaccentcolor));
+}
+.standardSidebarView-3F1I7i #editor-detached h3 {
+	color: rgb(var(--fontwhite3));
+}
+#bd-customcss-attach-controls .help-text .inline {
+	background-color: rgba(var(--vtransparencycolor), 0.4);
+}
+html .monaco-editor .reference-zone-widget .ref-tree .referenceMatch .highlight {
+	background: rgb(var(--vaccentcolor));
